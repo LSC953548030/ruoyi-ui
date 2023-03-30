@@ -1,20 +1,20 @@
-import { createRouter, createWebHashHistory } from 'vue-router'
+import { createRouter, createWebHistory  } from 'vue-router'
 // import LoginView from '../views/login.vue'
 //路由
 const routes = [
   {
+    path: '/',
+    name: 'Home',
+    component: () => import('../views/VForm.vue')
+  },{
     path: '/login',
     name: "login",
     component: () => import("../page/login.vue")
-  }, {
-    path: '/',
-    name: 'Home',
-    component: () => import('../views/Home.vue')
-  },
+  }
 ]
 
 const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHistory (),
   routes
 })
 

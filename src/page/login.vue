@@ -1,18 +1,18 @@
 <template>
   <el-form ref="form" :model="form" :rules="loginRules" label-width="80px">
-    <el-form-item label="用户名" >
-      <el-input v-model="form.userName" placeholder=请输入用户名></el-input>
+    <el-form-item label="用户名" style="margin-top: 40px; margin-right: 40px;">
+      <el-input prefix-icon="UserFilled" v-model="form.userName" placeholder=请输入用户名></el-input>
     </el-form-item>
-    <el-form-item label="密码">
-      <el-input type="password" v-model="form.password" placeholder=请输入密码></el-input>
-    </el-form-item>
-    <el-form-item>
-      <el-checkbox v-model="form.rememberMe">记住我</el-checkbox>
-      <el-button type="text" @click="onForgotPassword">忘记密码？</el-button>
+    <el-form-item label="密码" style=" margin-right: 40px;">
+      <el-input prefix-icon="Lock" type="password" v-model="form.password" placeholder=请输入密码></el-input>
     </el-form-item>
     <el-form-item>
-      <el-button type="primary" @click="onSubmit">登录</el-button>
-      <el-button type="primary" @click="onRegister">注册</el-button>
+      <el-checkbox v-model="form.rememberMe" style=" margin-right: 20px;">记住我</el-checkbox> | 
+      <el-button type="text" @click="onForgotPassword" style=" margin-left: 20px;">忘记密码？</el-button>
+    </el-form-item>
+    <el-form-item>
+      <el-button icon="CircleCheckFilled" type="primary" @click="onSubmit" style="margin-right: 20px;">登录</el-button>
+      <el-button icon="EditPen" type="primary" @click="onRegister">注册</el-button>
     </el-form-item>
   </el-form>
 </template>
